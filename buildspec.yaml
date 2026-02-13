@@ -28,7 +28,7 @@ phases:
       - echo "Build started on $(date)"
       - aws ec2 describe-instances
       - echo "Reading JSON file"
-      - cat data.json
+      - cat package.json
     finally:
       - echo "This always runs even if build fails"
 
@@ -39,4 +39,4 @@ phases:
 
 artifacts:
   files:
-    - data.json
+    - package.json
