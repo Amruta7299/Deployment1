@@ -28,9 +28,17 @@ phases:
       - echo Entered the build phase...
       - echo Build started on `date`
       - aws ec2 describe-instances
+      - echo "Reading JSON file"
+      - cat data.json
+
     finally:
       - echo This always runs even if the install command fails
   post_build:
     commands:
       - echo Entered the post_build phase...
-      - echo Build completed on `date`
+      - echo Build completed on `date
+
+ artifact:
+    files:
+      - data.json
+    
