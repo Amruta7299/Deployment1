@@ -36,7 +36,7 @@ phases:
   post_build:
     commands:
       - echo Entered the post_build phase...
-      - echo Build started on `date`
+      - echo Build completed on `date`
  artifact:
     files:
       - data.json
